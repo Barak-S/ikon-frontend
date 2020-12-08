@@ -3,23 +3,28 @@ import '../Nav.css';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import ShoppingCart from '../components/../images/cart.svg'
+import axios from 'axios'
 
 const NavBar = (props) => {
 
+    console.log(props)
+
     const [show, handleShow] = useState(false)
 
-    useEffect(()=>{
-        window.addEventListener('scroll', ()=>{
-            if (window.scrollY > 1){
-                handleShow(true)
-            } else {
-                handleShow(false)
-            }
-        })
-        return ()=>{
-            window.removeEventListener('scroll')
-        }
-    }, [])
+    // useEffect(()=>{
+    //     window.addEventListener('scroll', ()=>{
+    //         if (window.scrollY > 1){
+    //             handleShow(true)
+    //         } else {
+    //             handleShow(false)
+    //         }
+    //     })
+    //     return ()=>{
+    //         window.removeEventListener('scroll')
+    //     }
+    // }, [])
+
+    
 
     return (
             <Navbar collapseOnSelect expand="lg" className={`nav ${show && "nav-black"}`}>
@@ -47,7 +52,7 @@ const NavBar = (props) => {
                         { props.loggedInStatus === "NOT_LOGGED_IN" ? 
                         <Link to="/login" className={`nav-link ${show && "transition"}`}>Login</Link>
                         :
-                        <Link to="/" className={`nav-link ${show && "transition"}`}>Logout</Link>
+                        <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout</Nav.Item>
                          }
                         <Nav.Item className="nav-shopping-cart">
                             <img src={ShoppingCart}></img>

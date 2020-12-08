@@ -19,7 +19,19 @@ class App extends React.Component{
   
   checkLoginStatus(){
     axios.get('http://localhost:3000/logged_in', { withCredentials: true })
-    .then(response=>console.log(response.data))
+    .then(response=>{
+      if (response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN"){
+        this.setState({
+          loggedInStatus: "LOGGED_IN",
+          user: response.data.user
+        })
+      } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN" ){
+        this.setState({
+          loggedInStatus: "NOT_LOGGED_IN",
+          user: {}
+        })
+      }
+    })
     .catch(err=>console.log(err))
   }
 
@@ -34,12 +46,24 @@ class App extends React.Component{
     })
   }
 
+  handleLogout=()=>{
+    axios.delete('http://localhost:3000/logout', { withCredentials: true })
+    .then(resp=>{
+      this.setState({
+        loggedInStatus: "NOT_LOGGED_IN",
+        user: {}
+      })
+    })
+    .catch(err=>console.log(err))
+  }
+
 
   render(){
     return (
         <BrowserRouter>
           <Nav
             loggedInStatus={this.state.loggedInStatus}
+            handleLogout={this.handleLogout}
           />
           <div className="App">
           <Switch>
@@ -47,7 +71,7 @@ class App extends React.Component{
               exact 
               path= "/" 
               render={props=>(
-                <Home {...props} loggedInStatus={this.state.loggedInStatus} handleLogin={this.handleLogin} />
+                <Home {...props}/>
               )}/>
             <Route exact path= "/shop" render={(routerProps) => <Shop {...routerProps} />}/>
             <Route exact path= "/repair" render={(routerProps) => <Repair {...routerProps} />}/>

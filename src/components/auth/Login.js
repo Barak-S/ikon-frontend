@@ -25,7 +25,6 @@ class Login extends Component {
         { withCredentials: true }
         ).then(response=>{
             if (response.data.logged_in){
-                console.log(response.data)
                 this.props.handleAuth(response.data)
             }
         }).catch(err=>{
