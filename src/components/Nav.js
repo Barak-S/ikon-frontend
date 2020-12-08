@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import '../Nav.css';
+import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
+import ShoppingCart from '../components/../images/cart.svg'
 
-const Nav = () => {
+const NavBar = (props) => {
 
     const [show, handleShow] = useState(false)
 
@@ -18,20 +22,40 @@ const Nav = () => {
     }, [])
 
     return (
-        <div className={`nav ${show && "nav-black"}`}>
-            <img 
-                src="https://pbs.twimg.com/profile_images/859461137146028033/lcEPf_w_.jpg"
-                alt="Netflix Logo"
-                className="nav-logo"
-            >
-            </img>
-            <ul>
-                <li>Shop</li>
-                <li>Repair</li>
-                <li>Contact</li>
-            </ul>
-        </div>
+            <Navbar collapseOnSelect expand="lg" className={`nav ${show && "nav-black"}`}>
+                <Navbar.Brand href="/">
+                    <img 
+                        src="https://static.wixstatic.com/media/3e1a59_e03c1ae76b324b4aa19b57e8032a8443~mv2.png/v1/fill/w_448,h_140,al_c,lg_1,q_85/3e1a59_e03c1ae76b324b4aa19b57e8032a8443~mv2.webp"
+                        alt="Ikon Weapons Logo"
+                        className="nav-logo">
+                    </img>
+            </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="justify-content-center" style={{flex:1}}>
+                        <Link to="/shop" className={`nav-link ${show && "transition"}`}>
+                        Ikon Shop
+                        </Link>
+                        <Link to="/repair" className={`nav-link ${show && "transition"}`}>
+                        Repairs
+                        </Link>
+                        <Link to="/contact" className={`nav-link ${show && "transition"}`}>
+                        Contact
+                        </Link>
+                    </Nav>
+                    <Nav className="ml-auto">
+                        { props.loggedInStatus === "NOT_LOGGED_IN" ? 
+                        <Link to="/login" className={`nav-link ${show && "transition"}`}>Login</Link>
+                        :
+                        <Link to="/" className={`nav-link ${show && "transition"}`}>Logout</Link>
+                         }
+                        <Nav.Item className="nav-shopping-cart">
+                            <img src={ShoppingCart}></img>
+                        </Nav.Item>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
     );
 };
 
-export default Nav;
+export default NavBar;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Button, Form, Col } from 'react-bootstrap';
 
 class Registration extends Component {
 
@@ -44,35 +45,43 @@ class Registration extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={(e)=>this.handleSubmit(e)}>
-                    <input 
-                        onChange={(e)=>this.handleChange(e)} 
-                        type="text" 
-                        name="email" 
-                        value={this.state.email} 
-                        placeholder="Email" 
-                        required>
-                    </input>
-                    <input 
-                        onChange={(e)=>this.handleChange(e)} 
-                        type="password" 
-                        name="password" 
-                        value={this.state.password} 
-                        placeholder="Password" 
-                        required>
-                    </input>
-                    <input 
-                        onChange={(e)=>this.handleChange(e)} 
-                        type="password" 
-                        name="password_confirmation" 
-                        value={this.state.password_confirmation} 
-                        placeholder="Confirm Password" 
-                        required>
-                    </input>
-                    <button className="form-button" type="submit">Register</button>
-                </form>
-            </div>
+            <Col xs={12} sm={12} md={6} lg={5}>
+                <div className="auth-form">
+                    <Form onSubmit={(e)=>this.handleSubmit(e)}>
+                        <Form.Group>
+                            <Form.Control 
+                                onChange={(e)=>this.handleChange(e)} 
+                                type="text" 
+                                name="email" 
+                                value={this.state.email} 
+                                placeholder="Email" 
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                                onChange={(e)=>this.handleChange(e)} 
+                                type="password" 
+                                name="password" 
+                                value={this.state.password} 
+                                placeholder="Password" 
+                                required
+                            />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                                onChange={(e)=>this.handleChange(e)} 
+                                type="password" 
+                                name="password_confirmation" 
+                                value={this.state.password_confirmation} 
+                                placeholder="Confirm Password" 
+                                required
+                            />
+                        </Form.Group>
+                        <Button className="form-button" type="submit">Register</Button>
+                    </Form>
+                </div>
+            </Col>
         );
     }
 }
