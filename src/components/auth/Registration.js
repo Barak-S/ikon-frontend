@@ -45,7 +45,7 @@ class Registration extends Component {
 
     render() {
         return (
-            <Col xs={12} sm={12} md={6} lg={5}>
+            <Col xs={12} sm={12} md={5} lg={5} className="align-auto">
                 <div className="auth-form">
                     <Form onSubmit={(e)=>this.handleSubmit(e)}>
                         <Form.Group>

@@ -10,6 +10,13 @@ class Login extends Component {
         errors: {}
     }
 
+    componentDidMount(){
+        console.log(this.props)
+        if (this.props.loggedInStatus === "LOGGED_IN"){
+            this.props.history.push('/')
+        }
+    }
+
     handleSubmit(e){
         const { 
             email,
@@ -41,9 +48,11 @@ class Login extends Component {
 
     render() {
         return (
-            <Col xs={12} sm={12} md={6} lg={5}>
+            <Col xs={12} sm={12} md={5} lg={5} className="align-auto">
                 <div className="auth-form">
                     <Form onSubmit={(e)=>this.handleSubmit(e)}>
+                        <h3>Log In</h3>
+                        <hr/>
                     <Form.Group>
                         <Form.Control  
                             onChange={(e)=>this.handleChange(e)} 

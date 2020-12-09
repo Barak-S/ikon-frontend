@@ -7,6 +7,7 @@ import Nav from './components/Nav'
 import Home from './containers/Home'
 import Shop from './containers/Shop'
 import Repair from './containers/Repair'
+import Contact from './containers/Contact'
 import Login from './components/auth/Login'
 import Register from './components/auth/Registration'
 
@@ -37,6 +38,7 @@ class App extends React.Component{
 
   componentDidMount(){
     this.checkLoginStatus()
+    console.log(this.state.loggedInStatus)
   }
 
   handleAuth=(data)=>{
@@ -75,7 +77,8 @@ class App extends React.Component{
               )}/>
             <Route exact path= "/shop" render={(routerProps) => <Shop {...routerProps} />}/>
             <Route exact path= "/repair" render={(routerProps) => <Repair {...routerProps} />}/>
-            <Route exact path= "/login" render={(routerProps) => <Login {...routerProps} handleAuth={this.handleAuth} />}/>
+            <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps} />}/>
+            <Route exact path= "/login" render={(routerProps) => <Login {...routerProps} handleAuth={this.handleAuth} loggedInStatus={this.state.loggedInStatus} />}/>
             <Route exact path= "/register" render={(routerProps) => <Register {...routerProps} handleAuth={this.handleAuth} />}/>
           </Switch>
           </div>

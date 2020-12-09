@@ -13,19 +13,31 @@
 
 .auth-form{
   padding: 1rem;
-  border: 1px solid gray;
+  border: 1px solid #CED4DA;
   border-radius: 5px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+
 }
 
-.form-button{
+button.form-button{
   font-weight: 600;
-  background-color: #111;
+  background-color: #E62346;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
   color: white;
-  margin: 1rem;
   border-radius: 4px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 }
 
+.repair-form{
+  padding: 1rem;
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 
+}
+
+.align-auto{
+  margin: 0 auto;
+}

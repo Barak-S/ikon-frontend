@@ -7,8 +7,6 @@ import axios from 'axios'
 
 const NavBar = (props) => {
 
-    console.log(props)
-
     const [show, handleShow] = useState(false)
 
     // useEffect(()=>{
