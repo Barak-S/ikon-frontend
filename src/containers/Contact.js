@@ -15,7 +15,7 @@ const Contact = () => {
                     <br/>
                     please give us a call:
                     <br/>
-                    (843) 251-6488
+                    <strong>(843) 251-6488</strong>
                     <br/>
                     or email us at:
                     <br/>
