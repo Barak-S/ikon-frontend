@@ -51,7 +51,7 @@ button.form-button:hover{
 }
 
 .product-column{
-  margin: 3rem 0.5rem;
+  margin: 1rem 0rem;
 }
 
 .product-card{
@@ -73,17 +73,23 @@ img.product-img{
 
 .home-banner-wrapper{
   position: relative;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   align-items: center;
   height: 100vh;
   width: 100%;
   background-color: #333;
   background-image: url('https://images.unsplash.com/photo-1546818615-6b96c0bec198?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80');
   background-size: cover;
+  animation-name: backgroundEffect;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+  animation-direction: both;
+  z-index: -1;
 }
 
 .home-banner-wrapper::after{
+  z-index: -1;
   content: "";
   background: black;
   width: 100%;
@@ -114,11 +120,12 @@ button.home-banner-button:hover{
 }
 
 input.shop-search{
-  margin: 0rem 1rem;
+  margin: 1rem 1rem;
 }
 
 .shop-banner{
   background-image: url('https://images.unsplash.com/photo-1516399570-38faab0fbc61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+  background-size: cover;
   height: 30vh;
   width: 100%;
   display: flex;
@@ -132,6 +139,30 @@ input.shop-search{
   color: white;
 }
 
-/* form.form-inline{
-  margin: 2rem;
-} */
+form.form-inline{
+  padding: 0px;
+  margin: 0px;
+}
+
+@keyframes backgroundEffect {
+  0% {
+	background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+	background-position: 0% 0%;
+  }
+}
+
+.firstHeader, .secondHeader{
+  opacity: 0;
+  z-index: 4;
+}

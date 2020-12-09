@@ -57,8 +57,17 @@ class Repair extends React.Component {
                                 required
                             />
                         </Form.Group>
-                        <hr/>
                         <Button style={{backgroundColor: '#E62346'}} className="form-button" type="submit">Submit</Button>
+                        <hr/>
+                        <p className="text-muted">
+                        Once approved, you can rest easy while our expert gunsmiths repair your gun. 
+                        </p>
+                        <p className="text-muted">
+                        Using our online tracking system, you can follow along as your firearm goes through each step of the process.
+                        </p>
+                        <p className="text-muted">
+                        After completion, you'll get an email notification letting you know the job's done and on it's way, complete with a tracking number.
+                        </p>
                     </Form>
                 </Col>
             </div>
@@ -67,3 +76,5 @@ class Repair extends React.Component {
 };
 
 export default Repair;
+
+

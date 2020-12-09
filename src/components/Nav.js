@@ -45,16 +45,23 @@ const NavBar = (props) => {
                         </Link>
                     </Nav>
                     <Nav className="ml-auto">
-                        { props.loggedInStatus === "NOT_LOGGED_IN" ? 
-                        <Link to="/login" className={`nav-link ${show && "transition"}`}>Login</Link>
-                        :
-                        props.user.admin ? 
-                        <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout: Admin</Nav.Item>
-                        :
-                        <><Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout</Nav.Item>
-                        <Nav.Item className="nav-shopping-cart">
-                            <img src={ShoppingCart}></img>
-                        </Nav.Item></>
+                         { props.loggedInStatus === "LOGGED_IN" ? 
+                            props.user.admin ? 
+                            <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout: Admin</Nav.Item>
+                            :
+                            <>
+                                <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout</Nav.Item>
+                                <Nav.Item className="nav-shopping-cart">
+                                    <img src={ShoppingCart}></img>
+                                </Nav.Item>
+                            </>
+                         : 
+                         <>
+                            <Link to="/login" className={`nav-link ${show && "transition"}`}>Login</Link>
+                            <Nav.Item className="nav-shopping-cart">
+                                <img src={ShoppingCart}></img>
+                            </Nav.Item>
+                         </>
                          }
                     </Nav>
                 </Navbar.Collapse>
