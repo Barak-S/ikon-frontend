@@ -25,14 +25,14 @@ const NavBar = (props) => {
     
 
     return (
-            <Navbar collapseOnSelect expand="lg" className={`nav ${show && "nav-black"}`}>
+            <Navbar collapseOnSelect expand="lg" className={`nav ${show && "nav-black"}`} style={{zIndex: 4}}>
                 <Navbar.Brand href="/">
                     <img 
                         src="https://static.wixstatic.com/media/3e1a59_e03c1ae76b324b4aa19b57e8032a8443~mv2.png/v1/fill/w_448,h_140,al_c,lg_1,q_85/3e1a59_e03c1ae76b324b4aa19b57e8032a8443~mv2.webp"
                         alt="Ikon Weapons Logo"
                         className="nav-logo">
                     </img>
-            </Navbar.Brand>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-center" style={{flex:1}}>

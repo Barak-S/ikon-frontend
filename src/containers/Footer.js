@@ -3,7 +3,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 
 export default function Footer() {
     return (
-        <div style={{color: "#E62346", backgroundColor: '#191919'}}>
+        <div style={{color: "#E62346", backgroundColor: '#111'}}>
             <Container style={{paddingTop: 12}}>
                 <Row>
                     <Col>
@@ -17,11 +17,18 @@ export default function Footer() {
                         <li>United States</li>
                         </h4>
                     </Col>
+                    <Col>
+                        <ui className="list-unstyled">
+                        <li>Our Offices</li>
+                        <li>Support</li>
+                        <li>Advertisers</li>
+                        </ui>
+                    </Col>
                 </Row>
                 <hr />
                 <Row>
                     <Col>
-                        <p>© 2020, Ikon Weapons</p>
+                        <p>© 2020, Ikon Weapons | All rights reserved | Terms Of Service | Privacy</p>
                     </Col>
                 </Row>
             </Container>
