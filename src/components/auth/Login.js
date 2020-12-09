@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Button, Form, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 class Login extends Component {
 
@@ -10,12 +11,12 @@ class Login extends Component {
         errors: {}
     }
 
-    componentDidMount(){
-        console.log(this.props.loggedInStatus)
+    //componentDidMount(){
+        // console.log(this.props.loggedInStatus)
         // if (this.props.loggedInStatus === "LOGGED_IN"){
         //     this.props.history.push('/')
         // }
-    }
+    //}
 
     handleSubmit(e){
         const { 
@@ -74,6 +75,7 @@ class Login extends Component {
                                 required
                             />
                         </Form.Group>
+                        <Form.Text className="text-muted" style={{ paddingBottom: 15, fontWeight: "600" }}>Dont have an account? <Link to="/register">Sign Up</Link></Form.Text>
                         <Button className="form-button" type="submit">Login</Button>
                         </Form>
                     </div>

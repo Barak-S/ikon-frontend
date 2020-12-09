@@ -28,6 +28,11 @@ button.form-button{
   color: white;
   border-radius: 4px;
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+  transition: 0.3s ease;
+}
+
+button.form-button:hover{
+  background-color: #111;
 }
 
 .repair-form{
@@ -35,7 +40,6 @@ button.form-button{
   border: 1px solid #CED4DA;
   border-radius: 5px;
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-
 }
 
 .align-auto{
@@ -66,3 +70,68 @@ button.form-button{
 img.product-img{
   object-fit: contain;
 }
+
+.home-banner-wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  background-image: url('https://images.unsplash.com/photo-1546818615-6b96c0bec198?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80');
+  background-size: cover;
+}
+
+.home-banner-wrapper::after{
+  content: "";
+  background: black;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+
+button.home-banner-button{
+  z-index: 3;
+  background-color: #111;
+  padding: 0.5rem;
+  font-size: 25px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(90%);
+}
+
+button.home-banner-button:hover{
+  background-color: #E62346;
+  padding: 0.5rem 1rem;
+}
+
+input.shop-search{
+  margin: 0rem 1rem;
+}
+
+.shop-banner{
+  background-image: url('https://images.unsplash.com/photo-1516399570-38faab0fbc61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-banner-text{
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: white;
+}
+
+/* form.form-inline{
+  margin: 2rem;
+} */

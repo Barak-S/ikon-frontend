@@ -1,13 +1,17 @@
 import React from 'react';
-import Registration from '../components/auth/Registration'
-import Login from '../components/auth/Login'
+import { Col } from 'react-bootstrap';
+// import { Link } from "react-router-dom";
 
 class Home extends React.Component {
 
     render(){
         return (
             <div>
-                <p>Home</p>
+                <div className="home-banner-wrapper">
+                    <button className="home-banner-button" onClick={()=>this.props.history.push('/shop')}>SHOP</button>
+                </div>
+                <Col xs={12} sm={12} md={7} lg={7} className="align-auto">
+                </Col>
             </div>
         );
 

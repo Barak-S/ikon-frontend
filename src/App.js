@@ -25,24 +25,6 @@ class App extends React.Component{
     user: {}
   }
   
-  // checkLoginStatus(){
-  //   axios.get('http://localhost:3000/logged_in', { withCredentials: true })
-  //   .then(response=>{
-  //     if (response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN"){
-  //       this.setState({
-  //         loggedInStatus: "LOGGED_IN",
-  //         user: response.data.user
-  //       })
-  //     } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN" ){
-  //       this.setState({
-  //         loggedInStatus: "NOT_LOGGED_IN",
-  //         user: {}
-  //       })
-  //     }
-  //   })
-  //   .catch(err=>console.log(err))
-  // }
-
   async componentDidMount(){
     axios.get('http://localhost:3000/logged_in', { withCredentials: true })
     .then(response=>{
@@ -79,23 +61,18 @@ class App extends React.Component{
     .catch(err=>console.log(err))
   }
 
-
   render(){
-    console.log(this.state.user)
+    // console.log(this.state.user.admin)
     return (
         <BrowserRouter>
           <Nav
             loggedInStatus={this.state.loggedInStatus}
             handleLogout={this.handleLogout}
+            user={this.state.user}
           />
           <div className="App">
           <Switch>
-            <Route 
-              exact 
-              path= "/" 
-              render={props=>(
-                <Home {...props}/>
-              )}/>
+            <Route exact path= "/" render={props=>(<Home {...props}/>)}/>
             <Route exact path= "/shop" render={(routerProps) => <Shop {...routerProps} />}/>
             <Route exact path= "/repair" render={(routerProps) => <Repair {...routerProps} />}/>
             <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps} />}/>
@@ -103,7 +80,7 @@ class App extends React.Component{
             <Route exact path= "/register" render={(routerProps) => <Register {...routerProps} handleAuth={this.handleAuth} />}/>
 
             {/* Private Admin routes below */}
-            <PrivateRoute exact path="/admin/products" component={AdminAddProducts}  user={this.state.user} />
+            { this.state.user.admin && <PrivateRoute exact path="/admin/products" component={AdminAddProducts}  user={this.state.user} />}
             <Route exact path= "/register/admin/create" render={(routerProps) => <AdminRegistration {...routerProps} handleAuth={this.handleAuth} />}/>
             {/* <Route exact path= "/admin/products" render={(routerProps) => <AdminAddProducts {...routerProps} user={this.state.user} />}/> */}
           </Switch>

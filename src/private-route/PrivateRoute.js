@@ -4,8 +4,10 @@ const PrivateRoute = ({ component: Component, user, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      user.admin === true ? (
+      user.admin ? 
+      (
         <Component {...props} />
+        // console.log("admin", user)
       ) : (
         <Redirect to="/" />
       )

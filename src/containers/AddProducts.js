@@ -12,8 +12,8 @@ class AddProducts extends Component {
     }
 
     async componentDidMount(){
-        const user = await this.props.user.admin;
-        user? console.log("im an admin"): console.log("not an admin")
+        // const user = await this.props.user.admin;
+        // user? console.log("im an admin"): console.log("not an admin")
     }
 
     createProduct(e){
