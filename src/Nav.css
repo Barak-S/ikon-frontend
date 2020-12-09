@@ -1,4 +1,4 @@
-/* .nav{
+.nav{
     position: fixed;
     top: 0;
     width: 100%;
@@ -11,16 +11,21 @@
 
 .nav-black{
     background-color: #111;
-} */
+}
 
 a.nav-link{
     font-weight: 600;
     margin: 0rem 1rem;
 }
 
-/* a.nav-link.transition{
+div.nav-link.nav-item{
+    font-weight: 600;
+    margin: 0rem 1rem;
+}
+
+a.nav-link.transition{
     color: white !important;
-} */
+}
 
 .nav-logo{
     left: 20px;
@@ -34,3 +39,14 @@ a.nav-link{
     right: 0px; */
 }
 
+@media screen and (max-width: 1024px) {
+    .nav{
+        transition: none;
+    }
+    div.navbar-nav{
+        background-color: #111;
+    }
+    a.nav-link.false{
+        color:white !important;
+    }
+  }

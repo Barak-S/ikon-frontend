@@ -41,3 +41,7 @@ button.form-button{
 .align-auto{
   margin: 0 auto;
 }
+
+.content-wrapper{
+  padding-top: 35px;
+}

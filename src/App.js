@@ -10,6 +10,7 @@ import Repair from './containers/Repair'
 import Contact from './containers/Contact'
 import Login from './components/auth/Login'
 import Register from './components/auth/Registration'
+import Footer from './containers/Footer'
 
 class App extends React.Component{
 
@@ -38,7 +39,6 @@ class App extends React.Component{
 
   componentDidMount(){
     this.checkLoginStatus()
-    console.log(this.state.loggedInStatus)
   }
 
   handleAuth=(data)=>{
@@ -82,6 +82,7 @@ class App extends React.Component{
             <Route exact path= "/register" render={(routerProps) => <Register {...routerProps} handleAuth={this.handleAuth} />}/>
           </Switch>
           </div>
+          <Footer/>
         </BrowserRouter>
     );
   }

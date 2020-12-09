@@ -9,18 +9,18 @@ const NavBar = (props) => {
 
     const [show, handleShow] = useState(false)
 
-    // useEffect(()=>{
-    //     window.addEventListener('scroll', ()=>{
-    //         if (window.scrollY > 1){
-    //             handleShow(true)
-    //         } else {
-    //             handleShow(false)
-    //         }
-    //     })
-    //     return ()=>{
-    //         window.removeEventListener('scroll')
-    //     }
-    // }, [])
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            if (window.scrollY > 1){
+                handleShow(true)
+            } else {
+                handleShow(false)
+            }
+        })
+        return ()=>{
+            window.removeEventListener('scroll')
+        }
+    }, [])
 
     
 
