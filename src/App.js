@@ -12,6 +12,12 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Registration'
 import Footer from './containers/Footer'
 
+// Private Routes for Admin only
+import PrivateRoute from "./private-route/PrivateRoute";
+
+import AdminRegistration from './components/auth/AdminRegistration'
+import AdminAddProducts from './containers/AddProducts'
+
 class App extends React.Component{
 
   state={
@@ -19,7 +25,25 @@ class App extends React.Component{
     user: {}
   }
   
-  checkLoginStatus(){
+  // checkLoginStatus(){
+  //   axios.get('http://localhost:3000/logged_in', { withCredentials: true })
+  //   .then(response=>{
+  //     if (response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN"){
+  //       this.setState({
+  //         loggedInStatus: "LOGGED_IN",
+  //         user: response.data.user
+  //       })
+  //     } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN" ){
+  //       this.setState({
+  //         loggedInStatus: "NOT_LOGGED_IN",
+  //         user: {}
+  //       })
+  //     }
+  //   })
+  //   .catch(err=>console.log(err))
+  // }
+
+  async componentDidMount(){
     axios.get('http://localhost:3000/logged_in', { withCredentials: true })
     .then(response=>{
       if (response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN"){
@@ -35,10 +59,6 @@ class App extends React.Component{
       }
     })
     .catch(err=>console.log(err))
-  }
-
-  componentDidMount(){
-    this.checkLoginStatus()
   }
 
   handleAuth=(data)=>{
@@ -61,6 +81,7 @@ class App extends React.Component{
 
 
   render(){
+    console.log(this.state.user)
     return (
         <BrowserRouter>
           <Nav
@@ -80,6 +101,11 @@ class App extends React.Component{
             <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps} />}/>
             <Route exact path= "/login" render={(routerProps) => <Login {...routerProps} handleAuth={this.handleAuth} loggedInStatus={this.state.loggedInStatus} />}/>
             <Route exact path= "/register" render={(routerProps) => <Register {...routerProps} handleAuth={this.handleAuth} />}/>
+
+            {/* Private Admin routes below */}
+            <PrivateRoute exact path="/admin/products" component={AdminAddProducts}  user={this.state.user} />
+            <Route exact path= "/register/admin/create" render={(routerProps) => <AdminRegistration {...routerProps} handleAuth={this.handleAuth} />}/>
+            {/* <Route exact path= "/admin/products" render={(routerProps) => <AdminAddProducts {...routerProps} user={this.state.user} />}/> */}
           </Switch>
           </div>
           <Footer/>
