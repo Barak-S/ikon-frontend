@@ -13,36 +13,9 @@ const Home =()=> {
     let collection = useRef(null)
 
     useEffect(()=>{ 
-        TweenMax.to(
-            heading2,
-            1,
-            {
-            opacity: 1,
-            x: 5,
-            ease: Power3.easeOut,
-            delay: 0.2
-            }
-        )       
-        TweenMax.to(
-            heading,
-            1,
-            {
-            opacity: 0.8,
-            y: -10,
-            ease: Power3.easeOut,
-            delay: 1.2
-            }
-        )
-        TweenMax.to(
-            collection,
-            1,
-            {
-            opacity: 0.8,
-            y: -10,
-            ease: Power3.easeIn,
-            delay: 1.2
-            }
-        )
+        TweenMax.to( heading2, 1, { opacity: 1, x: 5, ease: Power3.easeOut, delay: 0.2})       
+        TweenMax.to( heading, 1, { opacity: 0.8, y: -10, ease: Power3.easeOut, delay: 1.2})
+        TweenMax.to( collection, 1, {opacity: 0.9, y: -10, ease: Power3.easeIn, delay: 1.2})
     }, [])
 
     return (

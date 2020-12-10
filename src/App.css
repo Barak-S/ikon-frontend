@@ -41,7 +41,7 @@ button.form-button:hover{
   border: 1px solid #CED4DA;
   border-radius: 5px;
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-  transform: translateY(-110px);
+  transform: translateY(-180px);
   background-color: white;
 }
 
@@ -54,15 +54,18 @@ button.form-button:hover{
 }
 
 .product-column{
-  padding: 1rem 0rem;
+  padding-bottom: 2rem;
 }
 
 .product-card{
+  display: inline-block;
   width: 400px;
   min-width: 250px;
   max-width: 100%;
   padding: 1rem;
-  /* margin: 1rem 0.5rem; */
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
   border-radius: 8px;
   /* box-shadow: -0.125rem 0 1.25rem #000; */
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
@@ -159,12 +162,12 @@ input.shop-search{
 }
 
 .repair-banner-text{
-  margin-top: 50px;
   font-weight: 700;
-  font-size: 3.75rem;
-  color: #111;
-  transform: translateY(-50%);
+  font-size: 3.5rem;
+  color: #1973BD;
 }
+
+
 
 .contact-banner{
   background-image: url('https://images.unsplash.com/photo-1551485913-b5dbedb723bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80');
@@ -182,6 +185,11 @@ input.shop-search{
   font-size: 3.75rem;
   color: white;
   transform: translateY(50%);
+}
+
+p.contact-footer{
+  padding-bottom: 3rem;
+  margin: 0px;
 }
 
 form.form-inline{
@@ -224,7 +232,7 @@ form.form-inline{
   margin-bottom: 20px;
   width: 400px;
   object-fit: contain;
-  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
   animation: float1 3s ease-in-out infinite;
 }
@@ -234,7 +242,7 @@ form.form-inline{
   color: #fff;
   margin-bottom: 2rem;
   -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
 }
 
 .firstHeader, .secondHeader{

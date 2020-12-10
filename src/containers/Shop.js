@@ -1,5 +1,9 @@
 import React from 'react';
 import { Form, CardDeck, Card, Col, Image } from 'react-bootstrap';
+import Galil1 from '../images/galil1.jpg'
+import Galil2 from '../images/galil2.jpg'
+import Galil3 from '../images/galil3.jpg'
+import Galil4 from '../images/galil4.jpg'
 
 const Shop = () => {
     return (
@@ -9,17 +13,15 @@ const Shop = () => {
                     <h3 className="shop-banner-text">IKON SHOP</h3>
                 </Col>
             </div>
-
-            <Col xs={12} sm={12} md={8} lg={7} className="align-auto">
-            <div className="product-column">
+            <Col xs={12} sm={12} md={9} lg={8} className="align-auto">
                 <Form inline>
                     <Form.Control className="shop-search" placeholder="Search"></Form.Control>
                 </Form>
-                <div>
-                {[{name: "Galil Style Rifle- IKON ARG 223", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/sylius_shop_product_original/product/galil-style-rifle-ikon-ar223-56.jpg", price: "$1,399.00"},
-                    {name: "Micro Galil - IKON G223-GRY", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/sylius_shop_product_original/product/micro-galil-ikon-g223-gry-22.jpg", price: "$2,000.00"},
-                    {name: "IKON AR-G RIFLE- GALIL STYLE POLY", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/detail_product_main/product/ikon-ar-g-rifle-galil-style-poly.jpg", price: "$1,349.00"},
-                    {name: "MICRO GALIL STYLE RIFLE - IKON G223-GRY", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/detail_product_main/product/micro-galil-style-rifle-ikon-g223-gry.jpg", price: "$2,075.00"}
+                <div className="product-column">
+                {[{name: "Galil Style Rifle- IKON ARG 223", img: Galil1, price: "$1,399.00"},
+                    {name: "Micro Galil - IKON G223-GRY", img: Galil3, price: "$2,000.00"},
+                    {name: "IKON AR-G RIFLE- GALIL STYLE POLY", img: Galil2, price: "$1,349.00"},
+                    {name: "MICRO GALIL STYLE RIFLE - IKON G223-GRY", img: Galil4, price: "$2,075.00"}
                     ].map(product=>{
                         return(
                             <div className="product-card">
@@ -35,8 +37,6 @@ const Shop = () => {
                         )
                     })}
                 </div>
-            </div>
-
             </Col>
         </div>
     );

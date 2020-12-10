@@ -20,14 +20,10 @@ class Repair extends React.Component {
     render(){
         return (
             <div className="repair-content">
-                <div className="repair-banner">
-                    <Col xs={12} sm={12} md={9} lg={7}>
-                        <h3 className="repair-banner-text">IKON REPAIRS</h3>
-                    </Col>
-                </div>
+                <div className="repair-banner"></div>
                 <Col xs={12} sm={12} md={7} lg={6} className="align-auto">
                     <Form className="repair-form">
-                        <h3>Repairs</h3>
+                        <h3 className="repair-banner-text">IKON REPAIRS</h3>
                         <hr/>
                         <Form.Group>
                             <Form.Label>Model</Form.Label>
