@@ -1,13 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap, TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
-import Galil from '../images/micro-galil-ikon.png'
+
+import Galil from '../images/galil-ikon.png'
 
 const Home =()=> {
 
     let heading = useRef(null)
     let heading2 = useRef(null)
+    let collection = useRef(null)
 
     useEffect(()=>{ 
         TweenMax.to(
@@ -17,36 +20,42 @@ const Home =()=> {
             opacity: 1,
             x: 5,
             ease: Power3.easeOut,
-            delay: 1
+            delay: 0.2
             }
         )       
         TweenMax.to(
             heading,
             1,
             {
-            opacity: 1,
+            opacity: 0.8,
             y: -10,
             ease: Power3.easeOut,
-            delay: 2.3
+            delay: 1.2
+            }
+        )
+        TweenMax.to(
+            collection,
+            1,
+            {
+            opacity: 0.8,
+            y: -10,
+            ease: Power3.easeIn,
+            delay: 1.2
             }
         )
     }, [])
 
     return (
-        <div>
+        
             <div className="home-banner-wrapper">
-                <Col className="home-banner-wrapper" xs={12} sm={12} md={8} lg={8} className="align-auto">
+                <Col xs={12} sm={12} md={4} lg={4} style={{textAlign: "center", zIndex: 4}}>
                     <img ref={el => {heading2 = el}} className="secondHeader" src={Galil}></img>
                     <h2 className="firstHeader" ref={el => {heading = el}}>WE ARE IKON</h2>
-                    {/* <p style={{color: "#ffffff"}} className="secondHeader" ref={el => {heading2 = el}}>
-                        With attention to detail, we continue to shape the future of the tech industry.
-                    </p> */}
-                    {/* <button className="home-banner-button" onClick={()=>this.props.history.push('/shop')}>SHOP</button> */}
+                    <Link to="/shop"><button ref={el => {collection = el}} className="home-banner-button">VIEW COLLECTION</button></Link>
                 </Col>
             </div>
-            <Col xs={12} sm={12} md={7} lg={7} className="align-auto">
-            </Col>
-        </div>
+
+        
     );
 
 

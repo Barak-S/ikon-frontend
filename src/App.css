@@ -74,7 +74,6 @@ img.product-img{
 .home-banner-wrapper{
   position: relative;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -85,11 +84,10 @@ img.product-img{
 	animation-duration: 30s;
 	animation-iteration-count: infinite;
   animation-direction: both;
-  z-index: -1;
 }
 
 .home-banner-wrapper::after{
-  z-index: -1;
+  z-index: 2;
   content: "";
   background: black;
   width: 100%;
@@ -103,20 +101,19 @@ img.product-img{
 button.home-banner-button{
   z-index: 3;
   background-color: #111;
-  padding: 0.5rem;
-  font-size: 25px;
+  padding: 0.2rem 0.5rem;
+  font-size: 15px;
   font-weight: 700;
   border: none;
   outline: none;
   border-radius: 6px;
   color: white;
   transition: all 0.3s ease-in-out;
-  transform: translateY(90%);
+  opacity: 0;
 }
 
 button.home-banner-button:hover{
   background-color: #E62346;
-  padding: 0.5rem 1rem;
 }
 
 input.shop-search{
@@ -162,16 +159,31 @@ form.form-inline{
   }
 }
 
+@keyframes float1 {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 .secondHeader{
   transform: translateX(-100%);
-  margin-bottom: 30px;
-  width: 280px;
+  margin-bottom: 20px;
+  width: 300px;
   object-fit: contain;
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
+  animation: float1 3s ease-in-out infinite;
 }
 .firstHeader{
-  padding-left: 25px;
   font-weight: 500;
   color: #fff;
+  margin-bottom: 2rem;
 }
 
 .firstHeader, .secondHeader{

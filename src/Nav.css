@@ -6,6 +6,7 @@
     transition-timing-function: ease-in !important;
     -webkit-transition: ease-in !important;
     transition: all 0.5s;
+
 }
 
 .nav-black{
@@ -37,8 +38,6 @@ div.nav-link.transition.nav-item{
 
 .nav-shopping-cart{
     cursor: pointer;
-    /* width: 130px;
-    right: 0px; */
 }
 
 @media screen and (max-width: 991px) {
