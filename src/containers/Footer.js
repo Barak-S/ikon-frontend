@@ -21,7 +21,8 @@ export default function Footer() {
                         <ui className="list-unstyled">
                         <li>Our Offices</li>
                         <li>Support</li>
-                        <li>Advertisers</li>
+                        <li>About</li>
+                        <li><img className="thin-blue-line" src="https://cdn11.bigcommerce.com/s-ey7tq/images/stencil/1280x1280/attribute_rule_images/3697_source_1592327610.png"></img></li>
                         </ui>
                     </Col>
                 </Row>
