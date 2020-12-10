@@ -11,12 +11,15 @@ class Login extends Component {
         errors: {}
     }
 
-    //componentDidMount(){
-        // console.log(this.props.loggedInStatus)
-        // if (this.props.loggedInStatus === "LOGGED_IN"){
-        //     this.props.history.push('/')
-        // }
-    //}
+    componentDidMount(){
+        axios.get('http://localhost:3000/logged_in', { withCredentials: true })
+        .then(response=>{
+        if (response.data.logged_in ){
+            this.props.history.push('/')
+        }
+        })
+        .catch(err=>console.log(err))
+    }
 
     handleSubmit(e){
         const { 
@@ -34,6 +37,7 @@ class Login extends Component {
         ).then(response=>{
             if (response.data.logged_in){
                 this.props.handleAuth(response.data)
+                this.props.history.push('/')
             }
         }).catch(err=>{
             console.log(err)

@@ -48,7 +48,8 @@ const Home =()=> {
     return (
         
             <div className="home-banner-wrapper">
-                <Col xs={12} sm={12} md={4} lg={4} style={{textAlign: "center", zIndex: 4}}>
+                <Col xs={12} sm={12} md={7} lg={7} style={{textAlign: "center", zIndex: 4}}>
+                    {/* <p className="mission-statement">We provide leading technology, deliver unmatched services, craftsmanship, and offer some of the best value in the industry.</p> */}
                     <img ref={el => {heading2 = el}} className="secondHeader" src={Galil}></img>
                     <h2 className="firstHeader" ref={el => {heading = el}}>WE ARE IKON</h2>
                     <Link to="/shop"><button ref={el => {collection = el}} className="home-banner-button">VIEW COLLECTION</button></Link>

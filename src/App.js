@@ -25,7 +25,7 @@ class App extends React.Component{
     user: {}
   }
   
-  async componentDidMount(){
+  componentDidMount(){
     axios.get('http://localhost:3000/logged_in', { withCredentials: true })
     .then(response=>{
       if (response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN"){
@@ -62,7 +62,6 @@ class App extends React.Component{
   }
 
   render(){
-    // console.log(this.state.user.admin)
     return (
         <BrowserRouter>
           <Nav

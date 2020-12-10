@@ -34,33 +34,35 @@ const NavBar = (props) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-center" style={{flex:1}}>
-                        <Link to="/shop" className={`nav-link ${show && "transition"}`}>
-                        Ikon Shop
+                        <Link to="/shop" style={{ textDecoration: 'none' }}>
+                            <Nav.Link className={`nav-links ${show && "transition"}`} href="#link">Ikon Shop</Nav.Link>
                         </Link>
-                        <Link to="/repair" className={`nav-link ${show && "transition"}`}>
-                        Repairs
+                        <Link to="/repair" style={{ textDecoration: 'none' }}>
+                            <Nav.Link className={`nav-links ${show && "transition"}`} href="#link">Repairs</Nav.Link>
                         </Link>
-                        <Link to="/contact" className={`nav-link ${show && "transition"}`}>
-                        Contact
+                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                            <Nav.Link className={`nav-links ${show && "transition"}`} href="#link">Contact</Nav.Link>
                         </Link>
                     </Nav>
                     <Nav className="ml-auto">
                          { props.loggedInStatus === "LOGGED_IN" ? 
                             props.user.admin ? 
-                            <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout: Admin</Nav.Item>
+                            <Nav.Link className={`nav-links ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout: Admin</Nav.Link>
                             :
                             <>
-                                <Nav.Item className={`nav-link ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout</Nav.Item>
-                                <Nav.Item className="nav-shopping-cart">
+                                <Nav.Link href="#link" className={`nav-links ${show && "transition"}`} onClick={()=>props.handleLogout()}>Logout</Nav.Link>
+                                <Nav.Link href="#link"  className="nav-shopping-cart">
                                     <img src={ShoppingCart}></img>
-                                </Nav.Item>
+                                </Nav.Link>
                             </>
                          : 
                          <>
-                            <Link to="/login" className={`nav-link ${show && "transition"}`}>Login</Link>
-                            <Nav.Item className="nav-shopping-cart">
+                            <Link to="/login" style={{ textDecoration: 'none' }}>
+                                <Nav.Link className={`nav-links ${show && "transition"}`} href="#link">Login</Nav.Link>
+                            </Link>
+                            <Nav.Link href="#link" className="nav-shopping-cart">
                                 <img src={ShoppingCart}></img>
-                            </Nav.Item>
+                            </Nav.Link>
                          </>
                          }
                     </Nav>

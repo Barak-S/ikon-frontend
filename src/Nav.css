@@ -13,22 +13,17 @@
     background-color: #111;
 }
 
-a.nav-link{
+a.nav-links.nav-link{
     font-weight: 600;
     margin: 0rem 1rem;
+    text-decoration: none;
 }
 
-div.nav-link.nav-item{
-    font-weight: 600;
-    margin: 0rem 1rem;
-}
 
-a.nav-link.transition{
+.transition{
     color: white !important;
 }
-div.nav-link.transition.nav-item{
-    color:white;
-}
+
 
 .nav-logo{
     left: 20px;
@@ -47,12 +42,7 @@ div.nav-link.transition.nav-item{
     div.navbar-nav{
         background-color: #111;
     }
-    div.nav-link.false.nav-item{
-        color: white;
-    }
-    div.nav-link.transition.nav-item{
-        color:white;
-    }
+
     a.nav-link.false{
         color:white !important;
     }

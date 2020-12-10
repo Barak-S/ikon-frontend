@@ -10,12 +10,12 @@ const Shop = () => {
                 </Col>
             </div>
 
-            <Col xs={12} sm={12} md={9} lg={7} className="align-auto">
+            <Col xs={12} sm={12} md={8} lg={7} className="align-auto">
             <div className="product-column">
                 <Form inline>
                     <Form.Control className="shop-search" placeholder="Search"></Form.Control>
                 </Form>
-                <CardDeck>
+                <div>
                 {[{name: "Galil Style Rifle- IKON ARG 223", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/sylius_shop_product_original/product/galil-style-rifle-ikon-ar223-56.jpg", price: "$1,399.00"},
                     {name: "Micro Galil - IKON G223-GRY", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/sylius_shop_product_original/product/micro-galil-ikon-g223-gry-22.jpg", price: "$2,000.00"},
                     {name: "IKON AR-G RIFLE- GALIL STYLE POLY", img: "https://atlantic-firearms-prod.s3.amazonaws.com/media/detail_product_main/product/ikon-ar-g-rifle-galil-style-poly.jpg", price: "$1,349.00"},
@@ -34,7 +34,7 @@ const Shop = () => {
                             </div>
                         )
                     })}
-                </CardDeck>
+                </div>
             </div>
 
             </Col>
