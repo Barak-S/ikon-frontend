@@ -6,6 +6,7 @@
     transition-timing-function: ease-in !important;
     -webkit-transition: ease-in !important;
     transition: all 0.5s;
+    z-index: 5;
 
 }
 

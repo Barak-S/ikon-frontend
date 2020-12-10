@@ -3,7 +3,7 @@ import { Form, CardDeck, Card, Col, Image } from 'react-bootstrap';
 
 const Shop = () => {
     return (
-        <div>
+        <div className="repair-content">
             <div className="shop-banner">
                 <Col xs={12} sm={12} md={9} lg={7}>
                     <h3 className="shop-banner-text">IKON SHOP</h3>

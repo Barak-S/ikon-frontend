@@ -9,6 +9,7 @@
   min-height: 100vh;
   margin-top: 60px;
   line-height: 1.6;
+  /* background-color: #F4F5F5; */
 }
 
 .auth-form{
@@ -40,6 +41,8 @@ button.form-button:hover{
   border: 1px solid #CED4DA;
   border-radius: 5px;
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+  transform: translateY(-110px);
+  background-color: white;
 }
 
 .align-auto{
@@ -47,11 +50,11 @@ button.form-button:hover{
 }
 
 .content-wrapper{
-  padding-top: 35px;
+  padding-top: 3rem;
 }
 
 .product-column{
-  margin: 1rem 0rem;
+  padding: 1rem 0rem;
 }
 
 .product-card{
@@ -140,6 +143,47 @@ input.shop-search{
   transform: translateY(50%);
 }
 
+.repair-content{
+  min-height: 100vh;
+  background-color: #F4F5F5 ;
+}
+
+.repair-banner{
+  background-image: url('https://images.unsplash.com/photo-1554401922-6d5c86a15a7e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repair-banner-text{
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: #111;
+  transform: translateY(-50%);
+}
+
+.contact-banner{
+  background-image: url('https://images.unsplash.com/photo-1551485913-b5dbedb723bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80');
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.contact-banner-text{
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: white;
+  transform: translateY(50%);
+}
+
 form.form-inline{
   padding: 0px;
   margin: 0px;
@@ -195,7 +239,7 @@ form.form-inline{
 
 .firstHeader, .secondHeader{
   opacity: 0;
-  z-index: 4;
+  z-index: 3;
 }
 
 /* .mission-statement{
