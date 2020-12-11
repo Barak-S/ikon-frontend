@@ -4,7 +4,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 export default function Footer() {
     return (
         <div style={{color: "#E62346", backgroundColor: '#111'}}>
-            <Container style={{paddingTop: 12}}>
+            <Container style={{paddingTop: 12, fontSize: 16}}>
                 <Row>
                     <Col>
                         <img 
@@ -12,7 +12,7 @@ export default function Footer() {
                             alt="Ikon Weapons Logo"
                             className="nav-logo">
                         </img>
-                        <h4 className="list-unstyled">
+                        <h4 className="list-unstyled"style={{color: "#E62346"}}>
                         <li>Florence, SC</li> 
                         <li>United States</li>
                         </h4>

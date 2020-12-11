@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Form, Col } from 'react-bootstrap';
-
+import { Button, Form, Col, Modal } from 'react-bootstrap';
+import Progress from '../components/Progress'
 
 class Repair extends React.Component {
 
@@ -9,6 +9,7 @@ class Repair extends React.Component {
         model: "",
         caliber: "",
         manufacturer: "",
+        sent: false,
     }
 
     handleChange(e){
@@ -17,7 +18,21 @@ class Repair extends React.Component {
         })
     }
 
+    handleClose=(e)=>{
+        this.setState({
+            sent: false
+        })
+    }
+
+    handleSubmit(e){
+        e.preventDefault()
+        this.setState({
+            sent: true
+        })
+    }
+
     render(){
+        
         return (
             <div className="repair-content">
                 <div className="repair-banner"></div>
@@ -58,7 +73,7 @@ class Repair extends React.Component {
                                 required
                             />
                         </Form.Group>
-                        <Button style={{backgroundColor: '#E62346'}} className="form-button" type="submit">Submit</Button>
+                        <Button style={{backgroundColor: '#E62346'}} className="form-button" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</Button>
                         <hr/>
                         <p className="text-muted">
                         Once approved, you can rest easy while our expert gunsmiths repair your gun. 
@@ -71,6 +86,30 @@ class Repair extends React.Component {
                         </p>
                     </Form>
                 </Col>
+                <>
+                    <Modal
+                        show={this.state.sent}
+                        onHide={this.handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                    >
+                        <Modal.Header closeButton>
+                        <Modal.Title>TIME TO SHIP</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <p><strong>Please Ship the firearm to: </strong></p> 
+                            <p>1951 Pisgah Rd, 125, Florence, South Carolina 29501, US</p>
+                            <h4>STATUS</h4>
+                            <Progress/>
+                        </Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={this.handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary">Understood</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
             </div>
         );
     }
