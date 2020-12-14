@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
 
 *{
   padding: 0px;
@@ -9,6 +11,9 @@
   min-height: 100vh;
   margin-top: 60px;
   line-height: 1.6;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
   /* background-color: #F4F5F5; */
 }
 
@@ -78,7 +83,11 @@ img.product-img{
 }
 
 .home-banner-wrapper{
+  display: flex;
+  min-height: 60vh;
   position: relative;
+  
+  /* position: relative;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -89,22 +98,77 @@ img.product-img{
   animation-name: backgroundEffect;
 	animation-duration: 30s;
 	animation-iteration-count: infinite;
-  animation-direction: both;
+  animation-direction: both; */
 }
 
-.home-banner-wrapper::after{
+/* .home-banner-wrapper::after{
   z-index: 2;
   content: "";
   background: black;
   width: 100%;
-  height:100%;
+  height:60vh;
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0.3;
+} */
+
+.img-container{
+  display: inline-block; 
+  overflow: hidden;
+  width: 50%;
+  height: 100vh;
 }
 
-button.home-banner-button{
+.photo-div{
+  transition: all .3s ease-in;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: Black;
+  text-align: center;
+  position: relative;
+}
+
+.banner-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-weight: 800;
+  font-size: 4rem;
+  color: white;
+}
+
+
+.header-pic{
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(50%) grayscale(100%);
+}
+
+.photo-div:hover{
+  transform: scale(1.09);
+}
+.photo-div:hover .banner-center{
+  display: initial;
+}
+
+.icon-brand-text{
+  margin: 3rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E62346;
+  font-weight: 600;
+}
+
+
+
+
+/* button.home-banner-button{
   z-index: 3;
   background-color: #111;
   padding: 0.2rem 0.5rem;
@@ -113,12 +177,11 @@ button.home-banner-button{
   border: none;
   outline: none;
   border-radius: 6px;
-  color: white;
   transition: all 0.3s ease-in-out;
-  opacity: 0;
-  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
-
+  opacity: 0.75;
+ background-color: #111;
+ color: white;
+ cursor: pointer;
 }
 
 button.home-banner-button:hover{
@@ -127,7 +190,7 @@ button.home-banner-button:hover{
 
 input.shop-search{
   margin: 1rem 1rem;
-}
+} */
 
 .shop-banner{
   background-image: url('https://images.unsplash.com/photo-1516399570-38faab0fbc61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
@@ -161,13 +224,11 @@ input.shop-search{
   align-items: center;
 }
 
-.repair-banner-text{
+/* .repair-banner-text{
   font-weight: 700;
   font-size: 3.5rem;
   color: #1973BD;
-}
-
-
+} */
 
 .contact-banner{
   background-image: url('https://images.unsplash.com/photo-1551485913-b5dbedb723bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80');
@@ -283,11 +344,24 @@ img.thin-blue-line{
   width: 36px;
   height: 36px;
   padding: 8px;
-
   background: #fff;
   border: 2px solid #666;
   color: #666;
   text-align: center;
-
   font: 32px Arial, sans-serif;
+}
+
+
+ul#horizontal-list {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+ul#horizontal-list li {
+  display: inline;
+  padding: 8.5px;
 }

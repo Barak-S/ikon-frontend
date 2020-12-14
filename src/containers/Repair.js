@@ -38,8 +38,6 @@ class Repair extends React.Component {
                 <div className="repair-banner"></div>
                 <Col xs={12} sm={12} md={7} lg={6} className="align-auto">
                     <Form className="repair-form">
-                        <h3 className="repair-banner-text">IKON REPAIRS</h3>
-                        <hr/>
                         <Form.Group>
                             <Form.Label>Model</Form.Label>
                             <Form.Control  

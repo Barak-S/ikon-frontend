@@ -2,17 +2,25 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-    transition-timing-function: ease-in !important;
-    -webkit-transition: ease-in !important;
-    transition: all 0.5s;
+    height: 130px;
+    transition-timing-function: ease-in-out !important;
+    -webkit-transition: ease-in-out !important;
+    transition: all 0.3s;
     z-index: 5;
+    justify-content: center;
+    background-color: white;
 
 }
 
 .nav-black{
-    background-color: #111;
+    background-color: white;
+    height: 60px;
 }
+
+.nav-black .nav-logo{
+    height: 60px;
+}
+
 
 a.nav-links.nav-link{
     font-weight: 600;
@@ -27,9 +35,12 @@ a.nav-links.nav-link{
 
 
 .nav-logo{
-    left: 20px;
-    width: 130px;
+    height: 120px;
     object-fit: contain;
+    transition-timing-function: ease-in-out !important;
+    -webkit-transition: ease-in-out !important;
+    transition: all 0.3s;
+
 }
 
 .nav-shopping-cart{
