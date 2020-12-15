@@ -2,12 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap, TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-// import Galil from '../images/galil-ikon.png'
 
 const Home =(props)=> {
 
     return (
-        <div className="home">
             <div className="home-banner-wrapper">
                 <Col xs={12} sm={12} md={6} lg={6} className="img-container">
                     <div className="photo-div">
@@ -21,10 +19,7 @@ const Home =(props)=> {
                         <h3 className="banner-center">SHOP</h3>
                     </div>
                 </Col>
-            </div>
-            <div>
-                <h3 className="icon-brand-text">"Our Vision: One satisfied customer at a time, forever."</h3>
-            </div>
+            <h3 className="icon-brand-text">"Our Vision: One satisfied customer at a time, forever."</h3>
             <div style={{paddingBottom:55}}>
                 <ul id="horizontal-list">
                     <li>
@@ -38,7 +33,10 @@ const Home =(props)=> {
                     </li>
                 </ul>
             </div>
-        </div>
+            </div>
+            
+            
+  
 
         
     );

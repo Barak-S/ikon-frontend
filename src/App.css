@@ -86,11 +86,11 @@ div.home.col{
   padding: 0;
 }
 
-.home-banner-wrapper{
-padding: 0;
-margin: 0;
+div.home-banner-wrapper{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
 }
-
 
 
 div.img-container{
@@ -123,6 +123,7 @@ div.img-container{
   font-weight: 800;
   font-size: 4rem;
   color: white;
+  opacity: 0.8;
 }
 
 
@@ -276,12 +277,19 @@ form.form-inline{
 
 
 
-@media screen and (max-width: 776px) {
+
+@media screen and (max-width: 766px) {
   .img-container{
-    height: 60vh
+    height: 60vh;
+    width: 100%;
   }
   img.header-pic{
     height: 60vh;
+    width: 100%;
+  }
+  .banner-center{
+    display: initial;
+    opacity: 0.8;
   }
 }
 
