@@ -1,5 +1,5 @@
 import { Steps } from 'antd';
-// import 'antd/dist/antd.css'
+import 'antd/dist/antd.css'
  import React from 'react';
  
  const Progress = () => {

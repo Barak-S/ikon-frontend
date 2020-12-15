@@ -273,59 +273,18 @@ form.form-inline{
 	}
 }
 
-.secondHeader{
-  transform: translateX(-100%);
-  margin-bottom: 20px;
-  width: 400px;
-  object-fit: contain;
-  -webkit-filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.5));
-  animation: float1 3s ease-in-out infinite;
-}
-.firstHeader{
-  font-size: 2.3rem;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 2rem;
-  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-}
 
-.firstHeader, .secondHeader{
-  opacity: 0;
-  z-index: 3;
-}
 
-/* .mission-statement{
-  color: white;
-  font-weight: 600;
-  opacity: 0.8;
-} */
 
-img.thin-blue-line{
-  margin-top: 10px;
-  width: 40px;
-  object-fit: contain;
-}
-
-@media screen and (max-width: 991px) {
-  /* .secondHeader{
-    width: 300px;
-  }
-  .firstHeader{
-    font-size: 2rem;
-  }
-  button.home-banner-button{
-    font-size: 16px;
-  } */
+@media screen and (max-width: 776px) {
   .img-container{
     height: 60vh
   }
+  img.header-pic{
+    height: 60vh;
+  }
 }
 
-/* .ant-steps-item-icon {
-  background: yellow;
-} */
 
 .numberCircle {
   border-radius: 50%;
