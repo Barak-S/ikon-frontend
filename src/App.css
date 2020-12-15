@@ -82,42 +82,26 @@ img.product-img{
   object-fit: contain;
 }
 
-.home-banner-wrapper{
-  display: flex;
-  min-height: 60vh;
-  position: relative;
-  
-  /* position: relative;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #333;
-  background-image: url('https://images.unsplash.com/photo-1546818615-6b96c0bec198?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80');
-  background-size: cover;
-  animation-name: backgroundEffect;
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
-  animation-direction: both; */
+div.home.col{
+  padding: 0;
 }
 
-/* .home-banner-wrapper::after{
-  z-index: 2;
-  content: "";
-  background: black;
-  width: 100%;
-  height:60vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.3;
-} */
+.home-banner-wrapper{
+padding: 0;
+margin: 0;
+}
 
+
+
+div.img-container{
+  padding: 0;
+}
 .img-container{
   display: inline-block; 
   overflow: hidden;
   width: 50%;
   height: 100vh;
+  background-color: teal;
 }
 
 .photo-div{
@@ -158,13 +142,14 @@ img.product-img{
 
 .icon-brand-text{
   margin: 3rem 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   color: #E62346;
   font-weight: 600;
 }
 
+.buttonIcon{
+  cursor: pointer;
+}
 
 
 
@@ -365,3 +350,6 @@ ul#horizontal-list li {
   display: inline;
   padding: 8.5px;
 }
+
+p.ikon-footer{
+text-align: center;}

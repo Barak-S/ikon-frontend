@@ -35,7 +35,7 @@ a.nav-links.nav-link{
 
 
 .nav-logo{
-    height: 120px;
+    height: 130px;
     object-fit: contain;
     transition-timing-function: ease-in-out !important;
     -webkit-transition: ease-in-out !important;
