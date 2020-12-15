@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home =(props)=> {
 
     return (
-        <Col className="home">
+        <div className="home">
             <div className="home-banner-wrapper">
                 <Col xs={12} sm={12} md={6} lg={6} className="img-container">
                     <div className="photo-div">
@@ -38,7 +38,7 @@ const Home =(props)=> {
                     </li>
                 </ul>
             </div>
-        </Col>
+        </div>
 
         
     );
