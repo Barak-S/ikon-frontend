@@ -6,6 +6,8 @@ import Galil3 from '../images/galil3.jpg'
 import Galil4 from '../images/galil4.jpg'
 
 const Shop = () => {
+
+    
     return (
         <div className="repair-content">
             <div className="shop-banner">

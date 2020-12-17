@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+body::before {
+  display:block;
+  content: '';
+  height:100px; /* or whatever */
+}
+
 .App{
   min-height: 100vh;
   line-height: 1.6;
@@ -87,7 +93,7 @@ div.home.col{
 
 div.home-banner-wrapper{
   padding: 0;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   min-height: 100vh;
   transition-timing-function: 0.3 ease-in-out;
   -webkit-transition: 0.3 ease-in-out;
@@ -97,7 +103,7 @@ div.home-banner-wrapper{
 }
 
 div.home-banner-wrapper.hide{
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 
