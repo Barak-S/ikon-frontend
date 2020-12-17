@@ -5,8 +5,23 @@ import { Link } from "react-router-dom";
 
 const Home =(props)=> {
 
+    const [show, handleShow] = useState(false)
+
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            if (window.scrollY > 1){
+                handleShow(true)
+            } else {
+                handleShow(false)
+            }
+        })
+        return ()=>{
+            window.removeEventListener('scroll')
+        }
+    }, [])
+
     return (
-            <div className="home-banner-wrapper">
+            <div className={`home-banner-wrapper ${show && "hide"}`}>
                 <Col xs={12} sm={12} md={6} lg={6} className="img-container">
                     <div className="photo-div">
                     <img onClick={()=>props.history.push('/repair')} className="header-pic" src='https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/handgun-disassembled-rich-legg.jpg'></img>
