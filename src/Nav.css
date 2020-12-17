@@ -3,13 +3,24 @@
     top: 0;
     width: 100%;
     height: 100px;
-    transition-timing-function: ease-in-out !important;
-    -webkit-transition: ease-in-out !important;
-    transition: all 0.3s;
+    transition-timing-function: 0.3s ease-in-out !important;
+    -webkit-transition: 0.3s ease-in-out !important;
+    /* transition: all 0.3s; */
     z-index: 5;
     justify-content: center;
     background-color: white;
+}
 
+.nav-logo{
+    height: 100px;
+    object-fit: contain;
+    transition-timing-function: 0.3 ease-in-out !important;
+    -webkit-transition: 0.3 ease-in-out !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-logo.transition{
+    height: 60px;
 }
 
 .nav-black{
@@ -17,9 +28,9 @@
     height: 60px;
 }
 
-.nav-black .nav-logo{
+/* .nav-black .nav-logo{
     height: 60px;
-}
+} */
 
 
 a.nav-links.nav-link{
@@ -34,14 +45,7 @@ a.nav-links.nav-link{
 }
 
 
-.nav-logo{
-    height: 100px;
-    object-fit: contain;
-    transition-timing-function: ease-in-out !important;
-    -webkit-transition: ease-in-out !important;
-    transition: all 0.3s;
 
-}
 
 .nav-shopping-cart{
     cursor: pointer;

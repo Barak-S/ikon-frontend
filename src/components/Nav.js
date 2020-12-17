@@ -28,7 +28,7 @@ const NavBar = (props) => {
             <Link to="/">
             <img 
                 src={logo}
-                className="nav-logo"
+                className={`nav-logo ${show && "transition"}`}
             >
             </img>
             </Link>
