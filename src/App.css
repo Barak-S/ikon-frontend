@@ -10,7 +10,7 @@
 body::before {
   display:block;
   content: '';
-  height:100px; /* or whatever */
+  height: 100px; /* for fixed nav bar height */
 }
 
 .App{
