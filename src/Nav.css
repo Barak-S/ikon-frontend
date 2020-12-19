@@ -110,6 +110,18 @@ span {
     margin-left: 16px;
 }
 
+.login-nav{
+    font-size: 17px;
+    font-weight: 500;
+    color: grey;
+    padding-bottom: 4px;
+    position: fixed;
+    right: 20px;
+    color: #111;
+}
+a.login-nav{
+    text-decoration: none;
+}
 
 @media screen and (max-width: 766px) {
     .menu-bars{

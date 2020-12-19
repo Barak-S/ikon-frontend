@@ -54,11 +54,11 @@ class Login extends Component {
     render() {
         return (
             <div className="content-wrapper">
-                <Col xs={12} sm={12} md={5} lg={4} className="align-auto">
+                <Col xs={12} sm={8} md={5} lg={4} className="align-auto">
                     <div className="auth-form">
                         <Form onSubmit={(e)=>this.handleSubmit(e)}>
-                            <h3>Log In</h3>
-                            <hr/>
+                            {/* <h3>Log In</h3>
+                            <hr/> */}
                         <Form.Group>
                             <Form.Control  
                                 onChange={(e)=>this.handleChange(e)} 
@@ -79,8 +79,9 @@ class Login extends Component {
                                 required
                             />
                         </Form.Group>
-                        <Form.Text className="text-muted" style={{ paddingBottom: 15, fontWeight: "600" }}>Dont have an account? <Link to="/register">Sign Up</Link></Form.Text>
                         <Button className="form-button" type="submit">Login</Button>
+                        <br/>
+                        <Form.Text className="text-muted" style={{ paddingBottom: 15, fontWeight: "600" }}>Dont have an account? <Link to="/register">Sign Up</Link></Form.Text>
                         </Form>
                     </div>
                 </Col>

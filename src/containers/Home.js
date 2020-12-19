@@ -21,7 +21,7 @@ const Home =(props)=> {
     // }, [])
 
     return (
-            <div className={`home-banner-wrapper ${show && "hide"}`}>
+            <div className={`home-banner-wrapper `}>
                 <Col xs={12} sm={12} md={6} lg={6} className="img-container">
                     <div className="photo-div">
                     <img onClick={()=>props.history.push('/repair')} className="header-pic" src='https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/handgun-disassembled-rich-legg.jpg'></img>

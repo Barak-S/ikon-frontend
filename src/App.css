@@ -23,14 +23,11 @@ body::before {
 }
 
 .auth-form{
-  padding: 1rem;
-  border: 1px solid #CED4DA;
-  border-radius: 5px;
-  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-
+  transform: translateY(-50%);
 }
 
 button.form-button{
+  width: 100%;
   font-weight: 600;
   background-color: #E62346;
   padding: 0.5rem 1rem;
@@ -43,7 +40,8 @@ button.form-button{
 }
 
 button.form-button:hover{
-  background-color: #111;
+  background-color: #fff;
+  color: #111;
 }
 
 .repair-form{
@@ -60,7 +58,12 @@ button.form-button:hover{
 }
 
 .content-wrapper{
-  padding-top: 3rem;
+  background: #000;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
 }
 
 .product-column{
@@ -160,6 +163,7 @@ div.img-container{
   text-align: center;
   color: #E62346;
   font-weight: 600;
+  font-size: 30px;
 }
 
 .buttonIcon{
@@ -346,4 +350,14 @@ ul#horizontal-list li {
 
 p.footer-text{
   margin-bottom: 15px;
+}
+
+input.form-control{
+  border-radius: 0px;
+  font-size: 17px;
+  /* width: 100%; */
+}
+
+small.text-muted.form-text{
+  padding-top: 2rem;
 }
